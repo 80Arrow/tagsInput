@@ -13,7 +13,7 @@ tagsInput
  ``` js
 layui.use(['tagsInput'],function(){
     var tagsInput= layui.tagsInput;
-    tagsInput.render({
+    nowTags= tagsInput.render({
       elem:'#inputTags',
       done: function(obj,value){ //回车后的回调
         console.log(obj)
@@ -25,6 +25,8 @@ layui.use(['tagsInput'],function(){
       }
     })
   })
+  
+  nowTags.add("测试");
   ```
 
 
@@ -32,3 +34,9 @@ layui.use(['tagsInput'],function(){
   * function(obj,value)
 `obj` 为jquery object
 `value` 为这次 回车/删除 的值
+`tagsInput.render({elem:"obj"})` 可以用于多对象
+
+nowTags
+
+  ## 2019-10-14 
+`add`方法只可以用一个对象，因现只要一个对象所以没有完善。css 改为link
