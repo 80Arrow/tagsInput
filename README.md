@@ -8,8 +8,7 @@ tagsInput
   </div>
  ```
 
-* 在`html`文件
-input 需要有id，父辈需要 .tagsDiv
+* 在`html`文件`input`需要有`id`，父辈需要 `.tagsDiv`
 
  ``` js
 layui.use(['tagsInput'],function(){
@@ -31,5 +30,5 @@ layui.use(['tagsInput'],function(){
 
   ## 常见问题
   * function(obj,value)
-  * obj 为jquery object
-  * value 为这次 回车/删除 的值
+`obj` 为jquery object
+`value` 为这次 回车/删除 的值
