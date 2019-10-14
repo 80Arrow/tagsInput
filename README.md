@@ -1,15 +1,14 @@
 HTML
-[pre]
+
 <div class="tagsDiv">
     <input type="text" id="inputTags" placeholder="回车生成标签" >
   </div>
-[/pre]
+
 input 需要有id，父辈需要 .tagsDiv  
 
-[hr]
 
 JS
-[pre]
+
 layui.use(['tagsInput'],function(){
     var tagsInput= layui.tagsInput;
     tagsInput.render({
@@ -24,8 +23,6 @@ layui.use(['tagsInput'],function(){
       }
     })
   })
-
-[/pre]
 
 function(obj,value)
 
