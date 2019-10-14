@@ -1,14 +1,17 @@
-HTML
+tagsInput
+===============
+## 项目介绍
 
+``` html
 <div class="tagsDiv">
     <input type="text" id="inputTags" placeholder="回车生成标签" >
   </div>
+ ```
 
-input 需要有id，父辈需要 .tagsDiv  
+* 在`html`文件
+input 需要有id，父辈需要 .tagsDiv
 
-
-JS
-
+ ``` js
 layui.use(['tagsInput'],function(){
     var tagsInput= layui.tagsInput;
     tagsInput.render({
@@ -23,8 +26,10 @@ layui.use(['tagsInput'],function(){
       }
     })
   })
+  ```
 
-function(obj,value)
 
-obj 为jquery object
-value 为这次 回车/删除 的值
+  ## 常见问题
+  * function(obj,value)
+  * obj 为jquery object
+  * value 为这次 回车/删除 的值
