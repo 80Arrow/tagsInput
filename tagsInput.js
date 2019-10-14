@@ -10,6 +10,7 @@ layui.define(['jquery','layer'],function(exports){
   //外部接口
   ,tagsInput = {
     config: {}
+    ,css:'<style id="Arrow80tagsInput" type="text/css">.tagsDiv em{font-style:normal}.tagsDiv{width:80%;padding:.5em;color:#777;border:1px solid #d5d5d5;background-color:#fff}.tagsDiv span{font-size:12px;font-weight:400;line-height:16px;position:relative;display:inline-block;height:16px;margin-right:3px;margin-bottom:3px;padding:4px 22px 5px 9px;cursor:pointer;transition:all .2s ease 0s;vertical-align:baseline;white-space:nowrap;color:#fff;background-color:#009688;text-shadow:1px 1px 1px rgba(0,0,0,.15)}.tagsDiv .close{font-size:12px;font-weight:700;line-height:20px;position:absolute;top:0;right:0;bottom:0;float:none;width:18px;padding:0;cursor:pointer;text-align:center;opacity:1;color:#fff;border:0 none;background:transparent none repeat scroll 0 0;text-shadow:none}.tagsDiv .close:hover{background:#ffb800}.tagsInput[type=text],.tagsInput[type=text]:focus{line-height:25px;display:inline;margin:0;padding:0 6px;border:0 none;outline:0 none;box-shadow:none}.albtn{line-height:30px;display:block;width:100px;height:30px;margin:0 auto;cursor:pointer;text-align:center;color:#fff;background:#ffb800}</style>'
     //设置全局项
     ,set: function(options){
       var that = this;
@@ -48,6 +49,9 @@ layui.define(['jquery','layer'],function(exports){
     ,spans
     ,options = that.config
     ,showInput = document.createElement("input"),tagObj = options.elem,nodeObj,ObjValArr;
+    if($("#Arrow80tagsInput").length==0){
+      $("body").append(that.css);
+    }
     for(var i=0;i<tagObj.length;i++){
       spans="";
       nodeObj=$(tagObj[i]);
@@ -126,4 +130,4 @@ layui.define(['jquery','layer'],function(exports){
     return thistagsInput.call(inst);
   };
   exports('tagsInput',tagsInput);
-}).link('/layuimini/tagsInput/tagsInput.min.css')
+})
